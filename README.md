@@ -31,4 +31,6 @@
 - 注释用的插件
   - Plugin 'scrooloose/nerdcommenter'
 - 可以在 vim 中使用 tab 补全
-  - Plugin 'vim-scripts/SuperTab'"
+  - Plugin 'vim-scripts/SuperTab'
+- vim go插件
+  - Plugin 'fatih/vim-go'
