@@ -21,7 +21,7 @@ set backspace=2
 " 设置Tab长度为4空格
 set tabstop=4
 " 设置自动缩进长度为4空格
-set shiftwidth=4
+set shiftwidth=4 softtabstop=4 expandtab
 " 继承前一行的缩进方式，适用于多行注释
 " set autoindent 
 " 定义快捷键的前缀，即<Leader> 默认为\
@@ -83,6 +83,9 @@ Plugin 'scrooloose/nerdcommenter'
 
 " 可以在 vim 中使用 tab 补全
 Plugin 'vim-scripts/SuperTab'"
+
+" vim go插件
+Plugin 'fatih/vim-go'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -230,3 +233,53 @@ filetype plugin on
 " 行模式注释 <leader>c<space>
 " 单行注释 <leader>cc
 " 取消注释 <leader>cu
+"
+" "==============================================================================
+" "vim-go 配置
+" "==============================================================================
+"==============================================================================
+" vim-go 插件
+"==============================================================================
+let g:go_fmt_command = "goimports" " 格式化将默认的 gofmt 替换
+let g:go_autodetect_gopath = 1
+let g:go_list_type = "quickfix"
+
+let g:go_version_warning = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_generate_tags = 1
+
+let g:godef_split=2
+
+" 编译包
+" :GoBuild
+" 安装包
+" :GoInstall
+" 测试包
+" :GoTest
+" 测试函数
+" :GoTestFunc
+" 快速执行当前文件
+" :GoRun
+" delve支持
+" :GoDebugStart
+" 声明
+" :GoDef 
+" 查找文档
+" :GoDoc / :GoDocBrowser
+" 加载/移除包
+" :GoImport / GoDrop
+" type-safe renaming
+" :GoRename
+" 查看test覆盖率
+" :GoCoverage.
+" 增加/移除 tags
+" :GoAddTags / :GoRemoveTags
+" Call golangci-lint with :GoMetaLinter to invoke all possible linters (golint, vet, errcheck, deadcode, etc.) and put the result in the quickfix or location list.
+" Lint your code with :GoLint, run your code through :GoVet to catch static errors, or make sure errors are checked with :GoErrCheck.
+" ... and many more! Please see doc/vim-go.txt for more information.
