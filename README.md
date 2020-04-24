@@ -5,6 +5,20 @@
 # 效果图
 ![Image text](https://github.com/835311324/IceCube-VimConf/blob/master/image/effect_picture.png)
 
+# Install
+
+1. 复制项目的.vimrc文件到家目录下
+
+2. 安装vundle插件管理器
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+3. 打开本地.vimrc文件
+```
+:PluginInstall
+```
+等待安装完成
+
 # 包含的插件列表
 
 - 用来提供一个导航目录的侧边栏
