@@ -3,7 +3,7 @@
 本项目记载个人的vim配置,涉及的插件都是其他大牛的作品没有进行任何二次开发
 
 # 效果图
-![Image text](./image/effect_picture.png)
+![Image text](https://github.com/835311324/IceCube-VimConf/blob/master/image/effect_picture.png)
 
 # 包含的插件列表
 
