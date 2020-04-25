@@ -48,3 +48,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   - Plugin 'vim-scripts/SuperTab'
 - vim go插件
   - Plugin 'fatih/vim-go'
+- 代码块补全插件
+  - Plugin 'SirVer/ultisnips'
+  - Plugin 'honza/vim-snippets'
+- tag管理插件
+  - Plugin 'majutsushi/tagbar'

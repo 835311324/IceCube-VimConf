@@ -87,6 +87,16 @@ Plugin 'vim-scripts/SuperTab'"
 " vim go插件
 Plugin 'fatih/vim-go'
 
+" 异步语法检测插件
+Plugin 'w0rp/ale'
+
+" 代码块补全插件
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+" tag管理插件
+Plugin 'majutsushi/tagbar'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -234,9 +244,6 @@ filetype plugin on
 " 单行注释 <leader>cc
 " 取消注释 <leader>cu
 "
-" "==============================================================================
-" "vim-go 配置
-" "==============================================================================
 "==============================================================================
 " vim-go 插件
 "==============================================================================
@@ -283,3 +290,63 @@ let g:godef_split=2
 " Call golangci-lint with :GoMetaLinter to invoke all possible linters (golint, vet, errcheck, deadcode, etc.) and put the result in the quickfix or location list.
 " Lint your code with :GoLint, run your code through :GoVet to catch static errors, or make sure errors are checked with :GoErrCheck.
 " ... and many more! Please see doc/vim-go.txt for more information.
+"
+"
+"==============================================================================
+" 'w0rp/ale' 插件配置
+"==============================================================================
+" 显示状态栏 高亮行
+let g:ale_sign_column_always = 1
+let g:ale_set_highlights = 1
+" 错误和警告标志
+let g:ale_sign_error = 'x'
+let g:ale_sign_warning = '!'
+let g:ale_linters = {
+\   'ansible': ['ansible-lint'],
+\   'python': ['pylint'],
+\}
+
+
+"==============================================================================
+" 'SirVer/ultisnips' && 'honza/vim-snippets'  插件配置
+" 代码补全
+"==============================================================================
+" tab键自动补全
+
+
+
+"==============================================================================
+"  majutsushi/tagbar 插件
+"==============================================================================
+nmap <F9> :TagbarToggle<CR>
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+"
+"
+"
+"
