@@ -19,6 +19,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 pip3 install ansible-lint # 异步语法检测依赖 非必要，不安装也不会报错
 pip3 install pylint      # 异步语法检测依赖 非必要，不安装也不会报错
 go get -u github.com/jstemmer/gotags # majutsushi/tagbar go语言依赖 非必要，不安装也不会报错
+yum install ctags -y
 ```
 4. 打开本地.vimrc文件
 ```
