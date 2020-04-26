@@ -39,6 +39,18 @@ filetype plugin indent on
 set list 
 " 折叠相关配置
 " set foldmethod=indent " 缩进方式折叠 za折叠  zo展开
+" tab 标签页切换快捷键
+:nn <Leader>1 1gt
+:nn <Leader>2 2gt
+:nn <Leader>3 3gt
+:nn <Leader>4 4gt
+:nn <Leader>5 5gt
+:nn <Leader>6 6gt
+:nn <Leader>7 7gt
+:nn <Leader>8 8gt
+:nn <Leader>9 8gt
+:nn <Leader>0 :tablast<CR>
+:nn <Leader>ts :tabs<CR>
 "==============================================================================
 "" vundle 配置
 "==============================================================================
